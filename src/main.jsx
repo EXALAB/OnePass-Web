@@ -10,9 +10,11 @@ import {
 import Root from './routes/root.jsx'
 import Privacy from './routes/privacy.jsx'
 
+const baseUrl = import.meta.env.BASE_URL
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={baseUrl}>
       <Routes>
         <Route path="/" element={<Root />} />
         <Route path="/privacy" element={<Privacy />} />
